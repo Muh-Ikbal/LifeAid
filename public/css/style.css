@@ -31,3 +31,12 @@ summary.accordion-button::-webkit-details-marker {
 details.accordion-item[open] .modul-learning {
     border-top: 1px solid red !important;
 }
+
+.carousel-indicators [data-bs-target] {
+    background-color: #979797;
+}
+
+/* Mengubah warna pagination yang sedang aktif (active) */
+.carousel-indicators .active {
+    background-color: #D61B23;
+}

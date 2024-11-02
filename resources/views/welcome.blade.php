@@ -9,7 +9,7 @@
                     style="background-color: #D61B23;width:100%;">KAMUS</a>
             </div>
             <div class="col-6">
-                <a href="#" class=" btn py-4 d-block w-full fs-3 text-decoration-none fw-bold text-white "
+                <a href="/course" class=" btn py-4 d-block w-full fs-3 text-decoration-none fw-bold text-white "
                     style="background-color: #D61B23;width:100%;">BELAJAR</a>
             </div>
         </div>

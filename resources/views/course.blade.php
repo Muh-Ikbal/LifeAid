@@ -29,7 +29,16 @@
 @endphp
 <x-header.head title="Belajar">
     <x-header.navbar />
+
     <div class=" p-3 min-h-screen">
+        <div class="my-2">
+            <a href="/" class="text-decoration-none text-black">
+                <div class="d-flex gap-3 align-items-center">
+                    <img src="{{ asset('svg/back.svg') }}" alt="">
+                    <h3>Belajar</h5>
+                </div>
+            </a>
+        </div>
         @foreach ($courses as $course)
             @php
                 $progress = round(($course['completed_lessons'] / $course['total_lessons']) * 100);
@@ -50,7 +59,7 @@
                         @foreach ($lessons as $lesson)
                             {{-- Pastikan lesson terkait dengan course saat ini --}}
                             @if ($course['id'] === $lesson['id_course'])
-                                <x-u-i.lesson path="{{ $lesson['title'] }}" titleLesson="{{ $lesson['title'] }}"
+                                <x-u-i.lesson path="{{ $lesson['id_course'] }}" titleLesson="{{ $lesson['title'] }}"
                                     statusLesson="{{ $lesson['completed'] }}" />
                             @endif
                         @endforeach

@@ -11,3 +11,9 @@ Route::get('/kamus', function () {
 Route::get('/course', function () {
     return view('course');
 });
+Route::get('/course/lesson', function () {
+    return view('lesson');
+});
+Route::get('/kamus/instruksi', function () {
+    return view('instruksi');
+});
