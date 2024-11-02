@@ -11,12 +11,14 @@
         href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css" />
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{{ $title }}</title>
 </head>
 
 <body>
 {{ $slot }}
+
+<script src="{{ asset('js/script.js') }}"></script>
 <script>
     let center = [4, 44.4]
     var map = tt.map({

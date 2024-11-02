@@ -24,17 +24,19 @@
                 <div class="row justify-content-center my-4">
                     <div class="col-6">
                         <a href="/" class="text-decoration-none d-box">
-                            <x-u-i.dictionary-card title="CPR" path="{{ asset('Image/cpr.png') }}" />
+                            <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#162550" />
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="/" class="text-decoration-none d-box">
-                            <x-u-i.dictionary-card title="CPR" path="{{ asset('Image/cpr.png') }}" />
+                            <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#162550" />
                         </a>
                     </div>
 
                 </div>
             @endfor
+
+            <x-u-i.progress-bar :rogress="25" courseModul ="Apa itu pertolongan pertama?" />
 
         </div>
 

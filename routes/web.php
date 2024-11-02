@@ -15,3 +15,6 @@ Route::get('/search-facilities', [ChatbotController::class, 'searchHealthcareFac
 Route::get('/', function () {
     return view('kamus');
 });
+Route::get('/course', function () {
+    return view('course');
+});
