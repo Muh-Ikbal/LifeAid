@@ -8,3 +8,6 @@ Route::get('/', function () {
 Route::get('/kamus', function () {
     return view('kamus');
 });
+Route::get('/course', function () {
+    return view('course');
+});
