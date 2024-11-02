@@ -1,4 +1,4 @@
-<div class="card my-2 d-flex align-items-center justify-content-center" style=" background-color:{{ $color }};width:100%; height:73px">
+<div class="card my-2 p-3 d-flex align-items-center justify-content-center" style=" background-color:{{ $color }};width:163px; height:73px;padding:5px;">
     <div class="d-flex justify-content-center align-items-center gap-2 ">
         <div class="icon">
             <img src="{{ $path }}" alt="{{ $title }}">
