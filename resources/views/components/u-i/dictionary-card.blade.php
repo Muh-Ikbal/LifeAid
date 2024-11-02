@@ -1,12 +1,10 @@
-<div class="card " style=" background-color:#D61B23;width:100%;">
-    <div class="p-2">
-
-        <div class="p-3 bg-white rounded-3">
-        <img src="{{ $path }}" width="131" class="card-img-top img-fluid " alt="...">
-    </div>
-    </div>
-
-    <div class="">
-        <h2 class="text-center text-white">{{ $title }}</h2>
+<div class="card my-2 d-flex align-items-center justify-content-center" style=" background-color:{{ $color }};width:100%; height:73px">
+    <div class="d-flex justify-content-center align-items-center gap-2 ">
+        <div class="icon">
+            <img src="{{ $path }}" alt="{{ $title }}">
+        </div>
+        <div class="title">
+            <h2 class="text-center fw-semibold text-white" style="font-size: 22px;">{{ $title }}</h2>
+        </div>
     </div>
 </div>

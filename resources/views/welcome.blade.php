@@ -9,7 +9,7 @@
                     style="background-color: #D61B23;width:100%;">KAMUS</a>
             </div>
             <div class="col-6">
-                <a href="#" class=" btn py-4 d-block w-full fs-3 text-decoration-none fw-bold text-white "
+                <a href="/course" class=" btn py-4 d-block w-full fs-3 text-decoration-none fw-bold text-white "
                     style="background-color: #D61B23;width:100%;">BELAJAR</a>
             </div>
         </div>
@@ -18,12 +18,12 @@
             <div class="row my-3 justify-content-center">
                 <div class="col-6">
                     <a href="/" class="text-decoration-none">
-                        <x-u-i.dictionary-card title="CPR" path="{{ asset('Image/cpr.png') }}" />
+                        <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#D61B23" />
                     </a>
                 </div>
                 <div class="col-6">
                     <a href="/" class="text-decoration-none">
-                        <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('Image/cpr.png') }}" />
+                        <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#D61B23" />
                     </a>
                 </div>
             </div>

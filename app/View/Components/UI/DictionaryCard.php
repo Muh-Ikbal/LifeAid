@@ -10,10 +10,12 @@ class DictionaryCard extends Component
 {
     public string $title;
     public string $path;
-    public function __construct(string $title,string $path)
+    public string $color;
+    public function __construct(string $title,string $path,string $color)
     {
         $this->title = $title;
         $this->path = $path;
+        $this->color = $color;
     }
 
     /**
