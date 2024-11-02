@@ -9,7 +9,8 @@
         "google/cloud-dialogflow": "^1.15",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "openai-php/client": "^0.10.2"
+        "openai-php/client": "^0.10.2",
+        "laravel/ui": "^4.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
