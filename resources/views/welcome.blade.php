@@ -32,7 +32,7 @@
         {{-- chatbot --}}
         <div class="row justify-content-center ">
             <div class="col-12">
-                <a href="/" class="text-decoration-none d-block py-3 px-2 text-white"
+                <a href="{{ route('chatbot.index') }}" class="text-decoration-none d-block py-3 px-2 text-white"
                     style="border-radius: 6px; background-color:#D61B23;width:100%;">
                     <div class="d-flex align-items-center gap-2">
                         <div>

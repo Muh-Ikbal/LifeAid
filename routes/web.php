@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home.index');
 
-Route::get('/chatbot', [ChatbotController::class, 'index']);
+Route::get('/chatbot', [ChatbotController::class, 'index'])->name('chatbot.index');
 // Route::post('/chatbot/send', [ChatbotController::class, 'sendMessage']);
 Route::get('/search-facilities', [ChatbotController::class, 'searchHealthcareFacilities']);
 
-Route::get('/kamus', [KamusController::class,'index']);
+Route::get('/kamus', [KamusController::class, 'index']);
 Route::get('/course', function () {
     return view('course');
 });
