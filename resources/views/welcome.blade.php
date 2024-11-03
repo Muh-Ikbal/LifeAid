@@ -32,17 +32,17 @@
         <div>
             <div class="d-flex my-3 justify-content-around flex-wrap gap-3">
                 <div class="">
-                    <a href="/" class="text-decoration-none">
-                        <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#D61B23" height="58" width="108" />
-                    </a>
-                </div>
-                <div class="">
-                    <a href="/" class="text-decoration-none">
+                    <a href="/kamus/instruksi/1" class="text-decoration-none">
                         <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#D61B23" height="58" width="108" />
                     </a>
                 </div>
                 <div class="">
-                    <a href="/" class="text-decoration-none">
+                    <a href="#" class="text-decoration-none">
+                        <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#D61B23" height="58" width="108" />
+                    </a>
+                </div>
+                <div class="">
+                    <a href="#" class="text-decoration-none">
                         <x-u-i.dictionary-card title="Pingsan" path="{{ asset('svg/mimisan.svg') }}" color="#D61B23" height="58" width="108" />
                     </a>
                 </div>
