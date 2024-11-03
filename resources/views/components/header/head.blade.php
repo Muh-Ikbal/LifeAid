@@ -10,32 +10,43 @@
     <link rel="stylesheet" type="text/css"
         href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css" />
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/chatbot.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{{ $title }}</title>
 </head>
 
 <body>
-{{ $slot }}
+    {{ $slot }}
 
-<script src="{{ asset('js/script.js') }}"></script>
-<script>
-    let center = [4, 44.4]
-    var map = tt.map({
-        key: "KqS9bj5YtpgTaq2wTo7uBWAjesGBsAnF",
-        container: "map",
-        center: center
-        zoom: 10
-    })
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script>
+        const quill = new Quill('#editor', {
+            theme: 'snow'
+        });
 
-    map.on('load', () => {
-        new tt.Marker().setLngLat(center).addTo(map)
-    })
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        function displayText() {
+            console.log(quill.root.innerHTML)
+        }
+    </script>
+    <script>
+        let center = [4, 44.4]
+        var map = tt.map({
+            key: "KqS9bj5YtpgTaq2wTo7uBWAjesGBsAnF",
+            container: "map",
+            center: center
+            zoom: 10
+        })
+
+        map.on('load', () => {
+            new tt.Marker().setLngLat(center).addTo(map)
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </body>

@@ -1,5 +1,5 @@
 <div class="modul-learning py-2 d-flex justify-content-between align-items-center">
-    <div><a href="/course/lesson/{{ $path }}" class="text-decoration-none text-black"><span>{{ $titleLesson }} </span></a></div>
+    <div><a href="/course/lesson/{{ $path }}" style="color:#162550;" class="text-decoration-none"><span>{{ $titleLesson }} </span></a></div>
     @if ($statusLesson)
         <div class="d-flex justify-content-center align-items-center"
             style="border-radius:100%; background-color:red;width:20px;height:20px;">

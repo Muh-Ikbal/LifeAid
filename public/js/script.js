@@ -55,3 +55,36 @@ class Accordion {
 document.querySelectorAll("details").forEach((i) => {
     new Accordion(i);
 });
+
+// shift call
+// JavaScript
+// JavaScript
+const sliderIcon = document.getElementById("sliderIcon");
+let isDragging = false;
+let startX;
+
+sliderIcon.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const dx = e.clientX - startX;
+        // Batasi agar ikon tetap di dalam area container
+        sliderIcon.style.left = Math.min(Math.max(10 + dx, 10), 250) + "px"; // 250px sesuai panjang slider yang diinginkan
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    if (isDragging) {
+        isDragging = false;
+        // Cek apakah sudah digeser cukup jauh
+        if (parseInt(sliderIcon.style.left) >= 250) {
+            window.location.href = "tel:112" // Aksi setelah geser selesai
+            sliderIcon.style.left = "10px"; // Reset posisi ikon setelah selesai
+        } else {
+            sliderIcon.style.left = "10px"; // Kembalikan ke posisi awal jika tidak sampai batas
+        }
+    }
+});

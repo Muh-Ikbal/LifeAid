@@ -30,7 +30,7 @@
                     <div class="d-box">
                         <a href="/kamus/instruksi/{{ $injury['id'] }}" class="text-decoration-none d-box">
                             <x-u-i.dictionary-card title="{{ $injury['name'] }}"
-                                path="{{ asset('svg/' . $injury['image']) }}" color="#162550" />
+                                path="{{ asset('svg/' . $injury['image']) }}" color="#162550" height="73" width="163" />
                         </a>
                     </div>
                 @endforeach

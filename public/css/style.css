@@ -38,5 +38,51 @@ details.accordion-item[open] .modul-learning {
 
 /* Mengubah warna pagination yang sedang aktif (active) */
 .carousel-indicators .active {
-    background-color: #D61B23;
+    background-color: #d61b23;
+}
+
+.section {
+    font-size: 12px !important;
+}
+
+.kamus {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* CSS */
+.slider-container {
+    width: 340px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d32f2f; /* Merah */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    transition: left 0.3s;
+}
+
+.help-text {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+    margin-left: 70px;
 }

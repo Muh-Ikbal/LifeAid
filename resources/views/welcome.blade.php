@@ -4,26 +4,44 @@
     <div class="my-3 container">
         {{-- kamus dan Belajar --}}
         <div class="row  justify-content-center">
+
             <div class="col-6 ">
-                <a href="/kamus" class="  btn py-4 d-block  fs-3 text-decoration-none text-center fw-bold text-white "
-                    style="background-color: #D61B23;width:100%;">KAMUS</a>
+                <a href="/kamus" class="kamus  btn d-block  fs-3 text-decoration-none text-center fw-bold text-white "
+                    style="background-color: #ffff;width:100%; height:100px">
+                    <div>
+                        <img src="{{ asset('svg/bukusaku.svg') }}" alt="">
+                        <h2 class="fw-bold" style="font-size: 16px; color:#162550" >BUKU SAKU</h2>
+                        <h6 style="color:#162550;font-size:10px">PERTOLONGAN PERTAMA</h6>
+                    </div>
+                </a>
             </div>
-            <div class="col-6">
-                <a href="/course" class=" btn py-4 d-block w-full fs-3 text-decoration-none fw-bold text-white "
-                    style="background-color: #D61B23;width:100%;">BELAJAR</a>
+            <div class="col-6 ">
+                <a href="/course" class="kamus  btn d-block  fs-3 text-decoration-none text-center fw-bold text-white "
+                    style="background-color: #ffff;width:100%; height:100px">
+                    <div>
+                        <img src="{{ asset('svg/belajar.svg') }}" alt="">
+                        <h2 class="fw-bold" style="font-size: 16px; color:#162550" >BELAJAR</h2>
+                        <h6 style="color:#162550;font-size:10px">PERTOLONGAN PERTAMA</h6>
+                    </div>
+                </a>
             </div>
         </div>
         {{-- fitur injuries --}}
         <div>
-            <div class="row my-3 justify-content-center">
-                <div class="col-6">
+            <div class="d-flex my-3 justify-content-around flex-wrap gap-3">
+                <div class="">
                     <a href="/" class="text-decoration-none">
-                        <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#D61B23" />
+                        <x-u-i.dictionary-card title="CPR" path="{{ asset('svg/cpr.svg') }}" color="#D61B23" height="58" width="108" />
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="">
                     <a href="/" class="text-decoration-none">
-                        <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#D61B23" />
+                        <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#D61B23" height="58" width="108" />
+                    </a>
+                </div>
+                <div class="">
+                    <a href="/" class="text-decoration-none">
+                        <x-u-i.dictionary-card title="Luka Bakar" path="{{ asset('svg/lukabakar.svg') }}" color="#D61B23" height="58" width="108" />
                     </a>
                 </div>
             </div>
