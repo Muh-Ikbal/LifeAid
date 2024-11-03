@@ -18,7 +18,6 @@
                     <span><img src="{{ asset('svg/chatbot.svg') }}" alt=""></span>
                 </div>
             </a>
-            {{-- <span class="navbar-brand align-self-center h1 mx-3 fw-bold">AidBot</span> --}}
         </div>
         <div>
             <div class="w-5 h-5 rounded-circle" style="background-image: url('{{ asset('Image/user.jpg') }}'); background-size: cover; background-position:center; width: 40px; height: 40px;"></div>
@@ -27,24 +26,24 @@
 
     <div class="chat-container">
         <div class="chat-box" id="chat-box">
-            <div class="bot-message">Halo, aku AidBot! 👋 Saya adalah asisten pertolongan pertama Anda. Apa yang bisa saya bantu hari ini?</div>
-            <div class="bot-message">
+            <div class="bot-message d-block">Halo, aku AidBot! 👋 Saya adalah asisten pertolongan pertama Anda. Apa yang bisa saya bantu hari ini?</div>
+            <div class="bot-message d-block">
                 <ul>
                     <li>Fasilitas Kesehatan Terdekat:
                         <ol>
                             <li><a href="javascript:void(0);" onclick="getUserLocationAndFindHealthFacilities('hospital')">Rumah Sakit</a></li>
-                            <li><a href="javascript:void(0);" onclick="getUserLocationAndFindHealthFacilities('doctor')">Puskesmas</a></li>
+                            <li><a href="javascript:void(0);" onclick="getUserLocationAndFindHealthFacilities('doctor')">Spesialis</a></li>
                             <li><a href="javascript:void(0);" onclick="getUserLocationAndFindHealthFacilities('pharmacy')">Apotek</a></li>
                         </ol>
                     </li>
-                    <li><a href="">Informasi Pertolongan Pertama</a></li>
+                    <li><a href="/course">Informasi Pertolongan Pertama</a></li>
                 </ul>
             </div>
         </div>
-        <div class="chat-input">
+        {{-- <div class="chat-input">
             <input class="rounded-pill" type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
             <button class="rounded-circle" onclick="sendMessage()"><img src="{{ asset('image/btn_icon.png') }}" alt=""></button>
-        </div>
+        </div> --}}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

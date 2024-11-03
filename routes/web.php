@@ -27,3 +27,26 @@ Route::get('/write', function () {
     return view('writelesson');
 });
 Route::get('/kamus/instruksi/{id}', [KamusController::class, 'insturksi']);
+
+use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
+
+Route::get('/nearby-facilities', function (Request $request) {
+    $lat = $request->query('lat');
+    $lon = $request->query('lon');
+    $apiKey = env('TOMTOM_API_KEY'); // Pastikan API Key TomTom sudah disimpan di .env
+
+    $response = Http::get("https://api.tomtom.com/search/2/poiSearch/health.json", [
+        'key' => $apiKey,
+        'lat' => $lat,
+        'lon' => $lon,
+        'radius' => 5000, // Radius pencarian dalam meter, sesuaikan dengan kebutuhan Anda
+        'limit' => 10, // Batas jumlah hasil
+    ]);
+
+    return $response->json();
+});
+
+Route::get('/fasilitas-kesehatan', function () {
+    return view('faskes');
+});
