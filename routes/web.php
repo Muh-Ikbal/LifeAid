@@ -20,6 +20,12 @@ Route::get('/course', function () {
 Route::get('/course/lesson', function () {
     return view('lesson');
 });
+Route::get('/course/selesai', function () {
+    return view('lessoncompleted');
+});
+Route::get('/write', function () {
+    return view('writelesson');
+});
 Route::get('/kamus/instruksi/{id}', [KamusController::class, 'insturksi']);
 
 use Illuminate\Support\Facades\Http;

@@ -3,27 +3,44 @@
         [
             'id' => 1,
             'title' => 'course 1',
-            'deskripsi' => 'penanganan luka bakar',
+            'deskripsi' => 'Dasar Pertolongan Pertama',
             'total_lessons' => 3,
             'completed_lessons' => 1,
         ],
         [
             'id' => 2,
             'title' => 'course 2',
-            'deskripsi' => 'penanganan cpr',
+            'deskripsi' => 'Peralatan Dasar Pertolongan Pertama',
             'total_lessons' => 4,
-            'completed_lessons' => 3,
+            'completed_lessons' => 0,
+        ],
+        [
+            'id' => 3,
+            'title' => 'course 3',
+            'deskripsi' => 'Penilaian Kondisi Korban',
+            'total_lessons' => 4,
+            'completed_lessons' => 0,
+        ],
+        [
+            'id' => 4,
+            'title' => 'course 4',
+            'deskripsi' => 'Penanganan Luka Bakar Dan Cedera',
+            'total_lessons' => 4,
+            'completed_lessons' => 0,
+        ],
+        [
+            'id' => 5,
+            'title' => 'course 5',
+            'deskripsi' => 'Keadaan Gawat Darurat',
+            'total_lessons' => 4,
+            'completed_lessons' => 0,
         ],
     ];
 
     $lessons = [
-        ['title' => 'apa itu luka bakar', 'id_course' => 1, 'completed' => false],
-        ['title' => 'bagaimana menangani luka bakar', 'id_course' => 1, 'completed' => false],
-        ['title' => 'tindakan darurat pada luka bakar', 'id_course' => 1, 'completed' => true], // Sudah selesai
-        ['title' => 'apa itu CPR', 'id_course' => 2, 'completed' => true], // Sudah selesai
-        ['title' => 'bagaimana melakukan CPR', 'id_course' => 2, 'completed' => false],
-        ['title' => 'teknik CPR pada dewasa', 'id_course' => 2, 'completed' => true], // Sudah selesai
-        ['title' => 'teknik CPR pada anak-anak', 'id_course' => 2, 'completed' => false],
+        ['title' => 'apa itu pertolongan pertama', 'id_course' => 1, 'completed' => true],
+        ['title' => 'Mengapa perlu pertolongan pertama', 'id_course' => 1, 'completed' => false],
+        ['title' => 'Quiz Course', 'id_course' => 1, 'completed' => false], // Sudah selesai
     ];
 
 @endphp
@@ -51,7 +68,7 @@
                 </div>
             @endif
         @endforeach
-        <div class="my-4">
+        <div class="">
             @foreach ($courses as $course)
                 <div class="my-3">
                     <x-u-i.modul-learning titleCourse="{{ $course['title'] }}"
@@ -59,7 +76,7 @@
                         @foreach ($lessons as $lesson)
                             {{-- Pastikan lesson terkait dengan course saat ini --}}
                             @if ($course['id'] === $lesson['id_course'])
-                                <x-u-i.lesson path="{{ $lesson['id_course'] }}" titleLesson="{{ $lesson['title'] }}"
+                                <x-u-i.lesson path="" titleLesson="{{ $lesson['title'] }}"
                                     statusLesson="{{ $lesson['completed'] }}" />
                             @endif
                         @endforeach
@@ -67,9 +84,11 @@
                 </div>
             @endforeach
         </div>
+        <div class="d-flex justify-content-center">
+            <x-u-i.shifttocall />
+        </div>
     </div>
 
-    </div>
 
 
 
