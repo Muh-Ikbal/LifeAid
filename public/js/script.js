@@ -63,28 +63,52 @@ const sliderIcon = document.getElementById("sliderIcon");
 let isDragging = false;
 let startX;
 
+function updateSliderPosition(dx) {
+    sliderIcon.style.left = Math.min(Math.max(10 + dx, 10), 250) + "px"; // 250px sesuai panjang slider yang diinginkan
+}
+
+function checkSliderPosition() {
+    if (parseInt(sliderIcon.style.left) >= 250) {
+        window.location.href = "tel:112";
+    }
+    sliderIcon.style.left = "10px";
+}
+
 sliderIcon.addEventListener("mousedown", (e) => {
     isDragging = true;
     startX = e.clientX;
 });
 
+sliderIcon.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+});
+
 document.addEventListener("mousemove", (e) => {
     if (isDragging) {
         const dx = e.clientX - startX;
-        // Batasi agar ikon tetap di dalam area container
-        sliderIcon.style.left = Math.min(Math.max(10 + dx, 10), 250) + "px"; // 250px sesuai panjang slider yang diinginkan
+        updateSliderPosition(dx);
+    }
+});
+
+document.addEventListener("touchmove", (e) => {
+    if (isDragging) {
+        const dx = e.touches[0].clientX - startX;
+        updateSliderPosition(dx);
     }
 });
 
 document.addEventListener("mouseup", () => {
     if (isDragging) {
         isDragging = false;
-        // Cek apakah sudah digeser cukup jauh
-        if (parseInt(sliderIcon.style.left) >= 250) {
-            window.location.href = "tel:112" // Aksi setelah geser selesai
-            sliderIcon.style.left = "10px"; // Reset posisi ikon setelah selesai
-        } else {
-            sliderIcon.style.left = "10px"; // Kembalikan ke posisi awal jika tidak sampai batas
-        }
+        checkSliderPosition();
     }
 });
+
+document.addEventListener("touchend", () => {
+    if (isDragging) {
+        isDragging = false;
+        checkSliderPosition();
+    }
+});
+

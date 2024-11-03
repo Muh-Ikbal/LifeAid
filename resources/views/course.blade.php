@@ -85,7 +85,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-center">
-            <x-u-i.shifttocall />
+            <x-u-i.darurat-button/>
         </div>
     </div>
 

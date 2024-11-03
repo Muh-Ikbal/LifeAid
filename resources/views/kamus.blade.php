@@ -24,7 +24,7 @@
         </div>
 
         {{-- daftar kamus --}}
-        <div class="dictionary-list" style="margin-bottom: 150px;">
+        <div class="dictionary-list" style="margin-bottom: 15px;">
             <div class="d-flex flex-wrap justify-content-center gap-3 my-4">
                 @foreach ($injuries as $injury)
                     <div class="d-box">
@@ -37,18 +37,8 @@
             </div>
         </div>
 
-        {{-- tombol darurat --}}
-        <div class="mt-4">
-            <div class="row container justify-content-center position-fixed bottom-0 left-0 overflow-hidden"
-                style="width: 100%;">
-                <div class="col-12">
-                    <a href="/kamus"
-                        class="shadow-sm mb-4  btn py-4 d-block fs-3 text-decoration-none text-center fw-bold text-white"
-                        style="background-color: #D61B23; max-width: 100%; border-radius:10px; margin-left: 0; margin-right: 0;">
-                        Darurat
-                    </a>
-                </div>
-            </div>
+        <div class="d-flex justify-content-center">
+            <x-u-i.shifttocall />
         </div>
     </div>
 </x-header.head>

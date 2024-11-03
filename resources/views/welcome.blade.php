@@ -81,6 +81,11 @@
             <div id="map" style="width:100%; height:300px;"></div>
         </div>
 
+        {{-- danger --}}
+        <div class="mt-4">
+            <x-u-i.darurat-button/>
+        </div>
+
     </div>
 </main>
 {{-- Script --}}
