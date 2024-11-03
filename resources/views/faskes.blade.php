@@ -12,9 +12,9 @@
     <style>
         .facility-box {
             border-radius: 8px;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             padding: 10px;
-            margin: 5px 0;
+            margin: 10px 0;
             cursor: pointer;
         }
     </style>
@@ -36,7 +36,7 @@
     </nav>
 
     <div id="map" style="width:100%; height:300px;"></div>
-    <div id="facility-list" class="container mt-3"></div>
+    <div id="facility-list" class="container mt-3 cards"></div>
 
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
     <script>
@@ -82,8 +82,8 @@
                         .addTo(map);
 
                     const facilityDiv = document.createElement('div');
-                    facilityDiv.className = 'facility-box';
-                    facilityDiv.innerHTML = `<h5>${name}</h5><p>${address}</p><p>${phone || 'No phone available'}</p>`;
+                    facilityDiv.className = 'facility-box card';
+                    facilityDiv.innerHTML = `<h5>${name}</h5><p>${address ? address : "Alamat tidak tersedia"}</p><p>${phone || 'No phone available'}</p>`;
                     facilityDiv.onclick = () => drawRouteToFacility([longitude, latitude], facilityMarker);
 
                     document.getElementById('facility-list').appendChild(facilityDiv);
