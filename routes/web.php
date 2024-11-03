@@ -40,3 +40,7 @@ Route::get('/nearby-facilities', function (Request $request) {
 
     return $response->json();
 });
+
+Route::get('/fasilitas-kesehatan', function () {
+    return view('faskes');
+});
