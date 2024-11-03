@@ -7,7 +7,7 @@
 
 .chat-box {
     padding: 15px;
-    height: 70vmax;
+    height: 90vmax;
     overflow-y: auto;
     border-bottom: 1px solid #ddd;
     background-color: #f9f9f9;
@@ -47,10 +47,26 @@
     padding: 8px 12px;
     margin: 10px 0;
     border-radius: 8px;
-    max-width: 80%;
+    max-width: 70%;
     word-wrap: break-word;
+    display: block;
 }
 
+@media screen and (max-width: 768px) {
+    .user-message {
+        float: right;
+        max-width: 100%;
+        background-color: #D52B23;
+        color: #fff;
+    }
+    
+    .bot-message {
+        float: left;
+        max-width: 100%;
+        background-color: #F1F0F0;
+        color: #333;
+    }
+}
 .user-message {
     /* align-self: flex-end; */
     background-color: #D52B23;
